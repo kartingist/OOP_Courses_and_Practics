@@ -1,10 +1,8 @@
 '''
 1. Создать родительский класс Initialization, который состоит из:
-
  метода инициализации, в который поступают аргументы: capacity - целое число, food - список из строковых названий еды.
   Если в значение capacity  передается не целое число, вывести надпись ‘Количество людей должно быть целым числом’
   и не создавать для таких экземпляров атрибуты capacity и food.
-
 '''
 class Initialization:
     def __init__(self, capacity, food):
@@ -16,12 +14,9 @@ class Initialization:
 
 
 ''' 
-
 2. Создать дочерний класс Vegetarian от класса Initialization, который состоит из: 
-
 метода инициализации, принимающего аргументы capacity, food. Нужно создать одноименные атрибуты через вызов родительского метода __init__.
 метода __str__, который возвращает строку формата "<capacity> людей предпочитают не есть мясо! Они предпочитают <food>"
-
 '''
 class Vegetarian(Initialization):
     def __init__(self, capacity, food):
@@ -29,13 +24,11 @@ class Vegetarian(Initialization):
 
     def __str__(self):
         return f"{self.capacity} людей предпочитают не есть мясо! Они предпочитают {self.food}"
+
 '''
-
 3. Создать дочерний класс MeatEater от класса Initialization, который состоит из: 
-
 метода инициализации, принимающего аргументы capacity, food. Нужно создать одноименные атрибуты через вызов родительского метода __init__.
 метода __str__, который возвращает строку формата "<capacity> мясоедов в Москве! Помимо мяса они едят еще и <food>"
-
 '''
 class MeatEater(Initialization):
     def __init__(self, capacity, food):
@@ -43,12 +36,9 @@ class MeatEater(Initialization):
 
     def __str__(self):
         return f"{self.capacity} мясоедов в Москве! Помимо мяса они едят еще и {self.food}"
+
 '''
-
 4. Создать дочерний класс SweetTooth от класса Initialization, который состоит из: 
-
-
-
 '''
 class SweetTooth(Initialization):
     # метода инициализации, принимающего аргументы capacity, food. Нужно создать одноименные атрибуты через вызов родительского метода __init__.
