@@ -1,21 +1,14 @@
-x=[0,1,2,3,4,13,5,6,7,8,9]
-x.append(10)	#Добавляет элемент в конец списка
+import os
+import os.path
+import re
+
+
+# x=os.listdir(path=".")
+# print(x)
+# for i in x:
+#     if '.py' in i:
+#         print(i)
+#
+top=''
+x=os.walk(top,  topdown=True, onerror=None, followlinks=False)
 print(x)
-L=[11, 12]
-x.extend(L)	#Расширяет список list, добавляя в конец все элементы списка L
-print(x)
-x.insert(5, [5])	#Вставляет на i-ый элемент значение x
-print(x)
-x.remove([5])	#Удаляет первый элемент в списке, имеющий значение x. ValueError, если такого элемента не существует
-print(x)
-print(x.pop(x[0]))	#Удаляет i-ый элемент и возвращает его. Если индекс не указан, удаляется последний элемент
-print(f'first element on pos[{x.index(9, 7, 10)}]')	#Возвращает положение первого элемента со значением x (при этом поиск ведется от start до end)
-print(x.count(5)) #Возвращает количество элементов со значением x
-x.sort() #Сортирует список на основе функции
-print(x)
-x.reverse()	#Разворачивает список
-print(x)
-y= x.copy()	#Поверхностная копия списка
-print(y)
-x.clear()	#Очищает список
-print(x, y, sep='\n')
